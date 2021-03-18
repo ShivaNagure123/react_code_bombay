@@ -1,0 +1,44 @@
+.form {
+    input,
+    select,
+    textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+#submit-input {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: map-get($color-palette, ims-brand-primary);
+    color: map-get($color-palette, ims-white);
+    cursor: pointer;
+    border-radius: 5px;
+
+    @media (max-width: $mobile-width) {
+        width: 100px;
+    }
+   
+}
+#reset-input {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: map-get($color-palette, ims-brand-primary);
+    color: map-get($color-palette, ims-white);
+    cursor: pointer;
+    border-radius: 5px;
+
+    @media (max-width: $mobile-width) {
+        width: 100px;
+    }
+    
+}
+
+.flex-break {
+    flex-basis: 100%;
+    height: 10px;
+    margin: 1.5rem 0;
+}

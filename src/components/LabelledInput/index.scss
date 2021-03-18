@@ -1,0 +1,15 @@
+.form-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 0.5rem;
+    background-color: map-get($color-palette, ims-white);
+    color: map-get($color-palette, ims-text-primary);
+    border: 1px solid map-get($color-palette, ims-brand-primary);
+
+   
+    @media (max-width: $mobile-width) {
+        max-width: 230px;
+    }
+}

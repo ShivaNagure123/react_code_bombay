@@ -1,0 +1,21 @@
+.form-textarea {
+    width: 350px;
+    height: 150px;
+    border-radius: 5px;
+    vertical-align: top;
+    padding: .5rem;
+    background-color: map-get($color-palette,ims-white );
+    border: 1px solid map-get($color-palette, ims-brand-primary);
+    color: map-get($color-palette, ims-text-primary);
+    resize: none;
+
+    @media (max-width: $tablet-width) {
+        width: 100%;
+    }
+}
+
+#char-count {
+    margin-top: 1rem;
+    font-family: NotoSans-Regular;
+    font-size: 1.2rem;
+}

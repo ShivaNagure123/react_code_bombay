@@ -1,0 +1,35 @@
+
+.nav-menu {
+  @include flex(row,center,flex-start,nowrap);
+  background-color:map-get($color-palette, ims-brand-primary);
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  &.active {
+    left: 0;
+    transition: 350ms;
+  }
+  &-items {
+    width: 100%;
+  }
+  .navbar-toggle {
+    @include flex(row,space-between,center,nowrap);
+    background-color: map-get($color-palette, ims-brand-primary);
+    width: 100%;
+    height: 80px;
+  }
+  .menuTitle {
+    margin-left: 16px;
+  }
+}
+
+
+
+
+
+
+
+

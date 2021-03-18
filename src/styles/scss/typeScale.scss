@@ -1,0 +1,167 @@
+h1 {
+    font-family: NotoSans-Bold;
+    font-size: 4.8rem;
+
+    @media (max-width: $tablet-width) {
+        font-size: 3.2rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 2.6rem;
+    }
+}
+
+h2 {
+    font-family: NotoSans-Bold;
+    font-size: 3.6rem;
+
+    @media (max-width: $tablet-width) {
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 2.4rem;
+    }
+}
+
+h3 {
+    font-family: NotoSans-Bold;
+    font-size: 2.8rem;
+
+    @media (max-width: $tablet-width) {
+        font-size: 2.6rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 2.2rem;
+    }
+}
+
+.title {
+    font-family: NotoSans-Medium;
+    font-size: 1.6rem;
+
+    &-xSmall {
+        font-family: NotoSans-Medium;
+        font-size: 1.2rem;
+    }
+
+    &-small {
+        font-family: NotoSans-Medium;
+        font-size: 1.4rem;
+    }
+
+    &-large {
+        font-family: NotoSans-Medium;
+        font-size: 1.8rem;
+    }
+
+    &-xLarge {
+        font-family: NotoSans-Medium;
+        font-size: 2rem;
+    }
+
+    @media (max-width: $tablet-width) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 1.2rem;
+    }
+}
+
+.body {
+    font-family: NotoSans-Regular;
+    font-size: 1.6rem;
+
+    &-small {
+        font-family: NotoSans-Regular;
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $tablet-width) {
+        font-family: NotoSans-Regular;
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-family: NotoSans-Regular;
+        font-size: 1.2rem;
+    }
+}
+
+.caption {
+    font-family: NotoSans-Light;
+    font-size: 1.6rem;
+
+    &-small {
+        font-family: NotoSans-Light;
+        font-size: 1.4rem;
+    }
+
+    &-xSmall {
+        font-family: NotoSans-Light;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: $tablet-width) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 1.2rem;
+    }
+}
+
+.links {
+    font-family: NotoSans-Light;
+    text-decoration: underline;
+    font-size: 1.6rem;
+
+    &-small {
+        font-family: NotoSans-Light;
+        text-decoration: underline;
+        font-size: 1.4rem;
+    }
+
+    &-xSmall {
+        font-family: NotoSans-Light;
+        text-decoration: underline;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: $tablet-width) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 1.2rem;
+    }
+}
+
+.breadcrumbs-text {
+    font-family: NotoSans-Regular;
+    font-size: 1.6rem;
+
+    @media (max-width: $tablet-width) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 1.2rem;
+    }
+}
+
+.button-text {
+    font-family: NotoSans-Medium;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+
+    @media (max-width: $tablet-width) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 1.2rem;
+    }
+}

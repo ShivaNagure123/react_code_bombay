@@ -1,0 +1,48 @@
+@import "cssReset.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "typeScale.scss";
+
+@include fontFace("NotoSans-Regular", "NotoSans-Regular");
+@include fontFace("NotoSans-Light", "NotoSans-Light");
+@include fontFace("NotoSans-Medium", "NotoSans-Medium");
+@include fontFace("NotoSans-SemiBold", "NotoSans-SemiBold");
+@include fontFace("NotoSans-Bold", "NotoSans-Bold");
+
+// @import '../../components/Button/index.scss';
+// @import '../../components/Card/index.scss';
+// @import '../../components/Footer/index.scss';
+@import '../../components/Form/index.scss';
+@import '../../components/LabelledInput/index.scss';
+// @import '../../components/LabelledTextArea/index.scss';
+@import '../../screens/Login/index.scss';
+@import '../../features/LoginForm/index.scss';
+@import '../../features/Header/index.scss';
+@import '../../screens/Dashboard/index.scss';
+@import '../../features/NavBar/index.scss';
+@import '../../features/NavBar/MenuItem/index.scss';
+@import '../../features/Footer/index.scss';
+@import '../../screens/Stock/index.scss';
+@import '../../screens/Stock/components/Card/index.scss';
+
+
+
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    font-family: NotoSans-Regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: map-get($color-palette, ims-body-grey);
+}
+#root {
+    height: 100%;
+    @include flex(column, flex-start, center, nowrap);
+    color: map-get($color-palette, ims-text-primary);
+}

@@ -1,0 +1,83 @@
+.button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    @media (max-width: $tablet-width) {
+        width: 120px;
+        height: 35px;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 100px;
+        height: 30px;
+    }
+
+    &.primary {
+        background-color: map-get($color-palette, ims-brand-primary);
+        color: map-get($color-palette, ims-white);
+
+        &.white {
+            color: map-get($color-palette, ims-brand-primary);
+            background-color: map-get($color-palette, ims-white);
+        }
+
+        &.skinless {
+            background: none;
+            width: 120px;
+        }
+    }
+
+    &.secondary {
+        border: 1px solid map-get($color-palette, ims-brand-primary);
+        color: map-get($color-palette, ims-brand-primary);
+        background: none;
+
+        &.white {
+            color: map-get($color-palette, ims-white);
+            border: 1px solid map-get($color-palette, ims-white);
+            background: none;
+        }
+
+        &.skinless {
+            border: none;
+            background: none;
+        }
+    }
+
+    &.tertiary {
+        border: 1px solid map-get($color-palette, ims-brand-primary);
+        color: map-get($color-palette, ims-brand-primary);
+        width: 120px;
+        height: 25px;
+        background: none;
+    }
+
+    &.regular {
+        width: 150px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    &.medium {
+        width: 120px;
+        height: 35px;
+        font-size: 1.6rem;
+
+        &.tertiary {
+            width: 100px;
+            height: 20px;
+        }
+    }
+
+    &.small {
+        width: 100px;
+        height: 30px;
+        font-size: 1.4rem;
+
+        &.tertiary {
+            width: 80px;
+            height: 20px;
+        }
+    }
+}

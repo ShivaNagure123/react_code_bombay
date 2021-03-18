@@ -1,0 +1,18 @@
+#loginContainer{
+    @include flex(column, space-evenly, center, nowrap);
+    flex: 1;
+    width: 450px;
+    height: 300px;
+    border: 1px solid map-get($color-palette, ims-brand-primary);
+    box-sizing: border-box;
+    margin: 10rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: map-get($color-palette, ims-white);
+    
+    @media (max-width: $mobile-width) {
+        width: 300px;
+        padding: 2rem;
+    }
+}
+    

@@ -1,0 +1,25 @@
+.footer{
+    @include flex(row,space-between,center,nowrap);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: map-get($color-palette, ims-body-grey);
+    box-sizing: border-box;
+    border-top: 1px solid map-get($color-palette, ims-footer-border);
+    padding: 1rem;
+ 
+
+    .developedBy{
+        @include flex(column,flex-start,center,nowrap);
+        line-height: 3rem;
+
+        .developerNames{
+            font-size: 3rem;
+            @media (max-width:$mobile-width) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

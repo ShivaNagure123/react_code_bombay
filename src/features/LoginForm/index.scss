@@ -1,0 +1,26 @@
+.loginFormContainer{
+    
+    .formInputContainer {
+        @include flex(column, space-between, flex-start, nowrap);
+
+        @media (max-width: $tablet-width) {
+            width: 100%;
+        }
+
+        & > label {
+            padding-bottom: 1rem;
+        }
+    }
+    .formButtonContainer{
+        @include flex(row, space-between, flex-start, nowrap);
+
+        @media (max-width: $tablet-width) {
+            @include flex(row, space-between, flex-start, nowrap);
+            width: 100%;
+        }
+        @media (max-width: $mobile-width) {
+            @include flex(row, space-between, flex-start, nowrap);
+            width: 100%;
+        }
+    }
+}

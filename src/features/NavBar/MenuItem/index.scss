@@ -1,0 +1,22 @@
+.nav-text {
+  @include flex(row,flex-start,center,nowrap);
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 50px;
+  & .menuItemLink {
+    @include flex(row,flex-start,center,nowrap);
+    text-decoration: none;
+    color:map-get($color-palette, ims-nav-menuitem-name);
+    width: 85%;
+    height: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  & .menuItemLink:hover {
+    background-color:map-get($color-palette, ims-nav-menuitem-background);
+  }
+}
+
+
+
+
