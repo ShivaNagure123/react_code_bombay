@@ -1,0 +1,2 @@
+export const USER_AUTHENTICATE = 'USER_AUTHENTICATE';
+export const USER_LOGOUT = 'USER_LOGOUT';

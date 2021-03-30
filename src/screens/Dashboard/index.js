@@ -1,9 +1,10 @@
 import React from 'react';
+import PageHeader from '../../components/PageHeader';
 
 const Dashboard = () => {
     return (
         <main id='dbContainer'>
-            <h1>Dashboard</h1>
+            <PageHeader title='Dashboard' placeholder='Home' />       
         </main>
     )
 }

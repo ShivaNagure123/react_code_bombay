@@ -1,12 +1,12 @@
 .header{
-    @include flex(row,space-between,center,nowrap);
+    @include flex(row,flex-start,center,nowrap);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
     background-color: map-get($color-palette, ims-brand-primary);
-    z-index: 3;
+    z-index: 1;
     padding: 0 4rem;
     box-sizing: border-box;
 
@@ -17,10 +17,97 @@
     @media (max-width: $mobile-width) {
         padding: 0 1rem;
     }
-    .menu-bars {
-        font-size: 3rem; 
-    }
-    .projectTitle{
+    &-title{
         color: map-get($color-palette, ims-white);
     }
+    &-menu-bars {
+        font-size: 3rem;
+        width: 5%; 
+    }
+    #headerContainer{
+        @include flex(row,flex-start,center,nowrap);
+        width: 75%;
+        padding: 1rem;
+    }
+    #userProfileContainer{
+        @include flex(row,flex-end,center,nowrap);
+        width: 20%;
+
+        
+    }   
+}
+ .userProfileName{
+    margin-left: 1rem;
+}
+.userProfileMenuName{
+    margin-left: 1rem;
+}
+.userProfileBtn {
+  background-color:inherit;
+  color: map-get($color-palette, ims-white);
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+.logOutBtn{
+  background-color:inherit;
+  color: map-get($color-palette, ims-brand-primary);
+  border: none;
+  outline: none;
+}
+.logOutBtn:hover{
+    cursor: pointer;
+}
+
+.userProfileDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.userProfile-dropdown-content {
+  @include flex(column,flex-start,center,nowrap);
+  display: block;
+  position: absolute;
+  right: 1px;
+  min-width: 200px;
+  min-height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+  background-color: #fefefe;
+  box-sizing: border-box;
+  border: 1px solid #060b26;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.userProfileIcons{
+    color: map-get($color-palette, ims-brand-primary);
+    font-size: 1.8rem
+}
+.userProfileMenuLink {
+  @include flex(row,flex-start,center,nowrap);
+  color: map-get($color-palette, ims-brand-primary);
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.userProfileDropdown:hover .userProfileBtn {
+    cursor: pointer;
+}
+.userProfileMenuLink:hover{
+     background-color:map-get($color-palette, ims-body-grey);
+     width: 90%;
+     border-radius: 5px;
+}
+.loginTextContainer{
+    @include flex(row,flex-end,center,nowrap);
+    width: 20%;
+    background-color:inherit;
+    color: map-get($color-palette, ims-white);
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    
+}
+.loginTextContainer:hover{
+        cursor: pointer;
 }

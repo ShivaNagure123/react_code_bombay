@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Auth from '../components/Auth';
 import Dashboard from '../screens/Dashboard';
 import Login from '../screens/Login';
 import Header from '../features/Header';
@@ -8,21 +9,20 @@ import Stock from '../screens/Stock';
 
 
 const Routes = () => {
+    // const userInfo = useSelector(state => state.auth);
     return (
         <Router>
-            <Header/>
-            <Switch>
-                <Route exact path='/' component={Login} />
-                <Route path='/dashboard' component={Dashboard} />
-                <Route exact path='/stock' component={Stock} />
-                <Route path='/stock/looms' component={null} />
-                <Route path='/stock/dobby' component={null} />
-                <Route path='/stock/nutBolts' component={null} />
-                <Route path='/stock/other' component={null} />
-            </Switch>
-            <Footer/>
+            <Header />
+                <Switch>
+                    <Route exact path='/' component={() => (<Redirect to='/login' />)} />
+                    <Route exact path='/login'> <Auth cmp={Login} /></Route>
+                    <Route exact path='/dashboard'> <Auth cmp={Dashboard} /> </Route>
+                    <Route exact path='/stock' >  <Auth cmp={Stock} /> </Route>
+                </Switch>
+            <Footer />
         </Router>
     )
+
 }
 
 export default Routes;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PageHeader from '../../components/PageHeader';
 import Card from './components/Card';
 import StockData from './constants';
 
@@ -18,6 +19,8 @@ const Stock = () => {
     };
     return (
         <main id='stockContainer'>
+            <PageHeader title='Stock' placeholder='Stock' />
+            <div className='flex-break'></div>
             <div className='stockMenuContainer'>
                 {generateCardsHTML()}
             </div>

@@ -1,0 +1,18 @@
+#pageHeader {
+    @include flex(column, space-between, flex-start, nowrap);
+    background: map-get($color-palette, ims-brand-primary);
+    border-radius: 10px;
+    height: 140px;
+    color: map-get($color-palette, ims-white);
+    padding: 2rem 2rem 2rem 4rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (max-width: $tablet-width) {
+        height: 120px;
+    }
+
+    @media (max-width: $mobile-width) {
+        height: 100px;
+    }
+}
