@@ -2,6 +2,7 @@ import React from 'react';
 import PageHeader from '../../components/PageHeader';
 import Card from './components/Card';
 import StockData from './constants';
+import { Layout } from '../../config/routes';
 
 const Stock = () => {
     const generateCardsHTML = () => {
@@ -18,13 +19,15 @@ const Stock = () => {
         return menuItemsHTML;
     };
     return (
-        <main id='stockContainer'>
-            <PageHeader title='Stock' placeholder='Stock' />
-            <div className='flex-break'></div>
-            <div className='stockMenuContainer'>
-                {generateCardsHTML()}
-            </div>
-        </main>
+        <Layout>
+            <main id='stockContainer'>
+                <PageHeader title='Stock' placeholder='Stock' />
+                <div className='flex-break'></div>
+                <div className='stockMenuContainer'>
+                    {generateCardsHTML()}
+                </div>
+            </main>
+        </Layout>
     )
 }
 

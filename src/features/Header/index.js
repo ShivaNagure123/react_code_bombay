@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IconContext } from 'react-icons';
+// import * as IoIcons from 'react-icons/ioChevron';
 import * as FaIcons from 'react-icons/fa';
 import * as BiIcons from 'react-icons/bi';
 import { Link, useHistory } from 'react-router-dom';
@@ -50,7 +51,7 @@ const Header = () => {
                     <div className="userProfileDropdown" onClick={() => setOpenUserProfile(!openUserProfile)}>
                         <button className="userProfileBtn">
                             <FaIcons.FaUser />
-                        <span className='title-xLarge userProfileName'>Hi, {currentUser.user.username}</span>
+                            <span className='title-xLarge userProfileName'>Hi, {currentUser.user.username}</span>
                         </button>
                         {openUserProfile &&
                             <div className="userProfile-dropdown-content" onClick={() => setOpenUserProfile(!openUserProfile)}>

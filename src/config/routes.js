@@ -7,19 +7,25 @@ import Header from '../features/Header';
 import Footer from '../features/Footer';
 import Stock from '../screens/Stock';
 
-
+export const Layout = (props) =>{
+    return (
+        <>
+        <Header/>
+          {props.children}
+        <Footer/>
+        </>
+    )
+}
 const Routes = () => {
-    // const userInfo = useSelector(state => state.auth);
+    
     return (
         <Router>
-            <Header />
                 <Switch>
                     <Route exact path='/' component={() => (<Redirect to='/login' />)} />
                     <Route exact path='/login'> <Auth cmp={Login} /></Route>
                     <Route exact path='/dashboard'> <Auth cmp={Dashboard} /> </Route>
                     <Route exact path='/stock' >  <Auth cmp={Stock} /> </Route>
                 </Switch>
-            <Footer />
         </Router>
     )
 

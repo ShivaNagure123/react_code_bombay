@@ -1,11 +1,14 @@
 import React from 'react';
 import PageHeader from '../../components/PageHeader';
+import { Layout } from '../../config/routes';
 
 const Dashboard = () => {
     return (
-        <main id='dbContainer'>
-            <PageHeader title='Dashboard' placeholder='Home' />       
-        </main>
+        <Layout>
+            <main id='dbContainer'>
+                <PageHeader title='Dashboard' placeholder='Home' />       
+            </main>
+        </Layout>
     )
 }
 
