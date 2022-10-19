@@ -1,8 +1,9 @@
 .nav-text {
-  @include flex(row,flex-start,center,nowrap);
-  padding: 8px 0px 8px 16px;
+  @include flex(column,flex-start,center,nowrap);
+  // padding: 8px 0px 8px 16px;
   list-style: none;
-  height: 50px;
+  min-height: 50px;
+  height: 60px;
   & .menuItemLink {
     @include flex(row,flex-start,center,nowrap);
     text-decoration: none;
@@ -11,9 +12,51 @@
     height: 100%;
     padding: 0 16px;
     border-radius: 4px;
+    
+  }
+  .submenuItemLink{
+    @include flex(column,flex-start,center,nowrap);
+    text-decoration: none;
+    color:map-get($color-palette, ims-nav-menuitem-name);
+    min-height: 60px;
+    height: 100% ;
+    padding-left: 3rem;
+
   }
   & .menuItemLink:hover {
     background-color:map-get($color-palette, ims-nav-menuitem-background);
+  }
+  .submenuItemLink:hover {
+    background-color:map-get($color-palette, ims-nav-menuitem-background);
+  }
+  .subMenuIcon{
+    margin-left: 100px;
+  }
+  .subMenuDropDown{
+      @include flex(row,flex-start,center,nowrap);
+      display: block;
+      position: absolute;
+      left: 25rem;
+      min-width: 200px;
+      min-height: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      z-index: 1;
+      background-color: #fefefe;
+      box-sizing: border-box;
+      border: 1px solid #060b26;
+      border-radius: 5px;
+      padding: 1rem;
+  }
+  .subMenuLink{
+    @include flex(row,flex-start,center,nowrap);
+    color: map-get($color-palette, ims-brand-primary);
+    padding: 1rem;
+    text-decoration: none;
+    &:hover{
+     background-color:map-get($color-palette, ims-body-grey);
+     width: 90%;
+     border-radius: 5px;
+    }
   }
 }
 

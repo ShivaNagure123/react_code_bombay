@@ -7,7 +7,7 @@ import { Layout } from '../../config/routes';
 const Stock = () => {
     const generateCardsHTML = () => {
         const menuItemsHTML = [];
-        StockData.forEach(((data, idx) => {
+        StockData.stock.forEach(((data, idx) => {
             menuItemsHTML.push(<Card key={idx}
                 id={data.id}
                 size={data.size}

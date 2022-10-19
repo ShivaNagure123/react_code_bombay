@@ -13,10 +13,7 @@ const Navbar = ({
         const menuItemsHTML = [];
         SidebarData.forEach(((data, idx) => {
             menuItemsHTML.push(<MenuItem key={idx}
-            cName={data.cName}
-            path={data.path}
-            icon={data.icon}
-            title={data.title}    
+            item={data}
             />);
         }));
         return menuItemsHTML;
@@ -24,10 +21,10 @@ const Navbar = ({
     return (
         <>
                 <nav className={openSidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        <li className='navbar-toggle'>
+                    <ul className='nav-menu-items'>
+                    `   <li className='navbar-toggle' >
                             <Link to='#' className='header-menu-bars'>
-                                <AiIcons.AiOutlineClose />
+                                <AiIcons.AiOutlineClose onClick={showSidebar}/>
                             </Link>
                             
                         </li>

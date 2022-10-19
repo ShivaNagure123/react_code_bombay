@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const LabelledInputTypeText = 'text';
+export const LabelledInputTypeNumber = 'number';
 export const LabelledInputTypeTel = 'tel';
 export const LabelledInputTypeEmail = 'email';
 export const LabelledInputTypePassword = 'password';

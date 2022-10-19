@@ -15,7 +15,9 @@
 @import '../../components/Form/index.scss';
 @import '../../components/LabelledInput/index.scss';
 @import '../../components/PageHeader/index.scss';
-// @import '../../components/LabelledTextArea/index.scss';
+@import '../../components/Table/index.scss';
+@import '../../components/LabelledTextArea/index.scss';
+@import '../../components/Notify/index.scss';
 @import '../../screens/Login/index.scss';
 @import '../../features/LoginForm/index.scss';
 @import '../../features/Header/index.scss';
@@ -25,7 +27,15 @@
 @import '../../features/Footer/index.scss';
 @import '../../screens/Stock/index.scss';
 @import '../../screens/Stock/components/Card/index.scss';
+@import '../../screens/Stock/Looms/index.scss';
+@import '../../screens/Stock/Looms/components/LoomsStatusButtons/index.scss';
+@import '../../screens/Stock/Looms/components/LoomsTable/index.scss';
+@import '../../features/StockForm/index.scss';
+@import '../../screens/Stock/AddStock/index.scss';
+@import '../../screens/Stock/Dobby/index.scss';
+@import '../../screens/Stock/Dobby/components/DobbyTable/index.scss';
 
+@import '../../screens/Billing/AddBill/index.scss';
 
 
 

@@ -1,0 +1,18 @@
+.deafult-toast-container{
+    @include flex(row,center,center,nowrap);
+}
+.success-toast-container{
+    @include flex(row,center,center,nowrap);    
+}
+.error-toast-container{
+    @include flex(row,center,center,nowrap);
+}
+.info-toast-container{
+    @include flex(row,center,center,nowrap);
+}
+// .toast-body{
+   
+// }
+.notify-icons{
+    font-size: 1.6rem;
+}

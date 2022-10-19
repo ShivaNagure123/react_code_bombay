@@ -19,6 +19,17 @@
     }
     &-title{
         color: map-get($color-palette, ims-white);
+        @media (max-width: $mobile-width) {
+            display: none;
+        }
+        &-mobileView{
+            color: map-get($color-palette, ims-white);
+            display: none;
+             @media (max-width: $mobile-width) {
+                padding: 1rem;
+                display: flex;
+            }
+        }
     }
     &-menu-bars {
         font-size: 3rem;
@@ -38,6 +49,9 @@
 }
  .userProfileName{
     margin-left: 1rem;
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
 }
 .userProfileMenuName{
     margin-left: 1rem;

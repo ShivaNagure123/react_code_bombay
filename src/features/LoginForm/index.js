@@ -1,27 +1,36 @@
 import React, { useState } from 'react';
 import { useHistory  } from 'react-router';
-import { useDispatch  } from 'react-redux';
+// import { useDispatch  } from 'react-redux';
 import Form from '../../components/Form';
 import LabelledInput, 
 { LabelledInputTypeText, LabelledInputTypePassword, 
 LabelledInputTypeReset, LabelledInputTypeSubmit } from '../../components/LabelledInput';
-import { authenticateUser } from '../../redux/actions/AuthActions';
+import Notify from '../../components/Notify';
+// import { authenticateUser } from '../../redux/actions/AuthActions';
+import authenticationManagementAPIs from '../../services/authentication.service';
 
 const LoginForm = () => {
-    const dispatch = useDispatch();
-    const [uname, setUname] = useState('');
-    const [pass, setPass] = useState('');
+    // const dispatch = useDispatch();
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
-    const handleSubmit = (e) =>{
+
+    const handleSubmit = async (e) =>{
         e.preventDefault(); 
-        const userCredentials ={
-            username: uname,
-            password:pass
-        }
-        alert('login success');
         
-        dispatch(authenticateUser(userCredentials));
-        history.push('/dashboard');
+        const responseData = await authenticationManagementAPIs.login(username, password);
+        console.log(responseData.data);
+        if (responseData.data.msg){
+            localStorage.setItem('token', responseData.data.msg);
+            localStorage.setItem('username', responseData.data.uInfo[1]);
+            Notify.success('Login Successfull..','top-center');
+            history.push('/dashboard');
+        }
+        else{
+            Notify.error('Invalid Username or Password!..', 'top-right');
+        }
+    
+        // dispatch(authenticateUser(uname, pass));
     }
     
     return (
@@ -32,14 +41,14 @@ const LoginForm = () => {
                         type={LabelledInputTypeText} label='User name :'
                         breakColumn={true}
                         placeholder='Enter User name'
-                        onChange={e => setUname(e.target.value)} />
+                        onChange={e => setUsername(e.target.value)} />
                 </div>
                 <div className='formInputContainer'>
                     <LabelledInput id='password'
                         type={LabelledInputTypePassword} label='Password :'
                         breakColumn={true} 
                         placeholder='Enter Password' 
-                        onChange={e => setPass(e.target.value)}/>
+                        onChange={e => setPassword(e.target.value)}/>
                 </div>
                 <div className='formButtonContainer'>
                     <LabelledInput id='reset'

@@ -1,7 +1,8 @@
 import React from 'react';
 // import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-// import * as IoIcons from 'react-icons/io';
+import * as RiIcons from 'react-icons/ri';
+import * as GrIcons from 'react-icons/gr';
 
 export const SidebarData = [
     {
@@ -14,8 +15,34 @@ export const SidebarData = [
         title: 'Stock',
         path: '/stock',
         icon: <AiIcons.AiOutlineStock />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+        subNav: [
+            {
+                title: 'Add Stock',
+                path: '/stock/addStock',
+                icon: <GrIcons.GrAddCircle />
+            },
+        ]
+    },
+     {
+        title: 'Billing',
+        path: '/billing',
+        icon: <AiIcons.AiOutlineStock />,
+        cName: 'nav-text',
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+        subNav: [
+            {
+                title: 'Billing',
+                path: '/billing/addBill',
+                icon: <GrIcons.GrAddCircle />
+            },
+        ]
     }
+
+
     // ,
     // {
     //     title: 'Reports',

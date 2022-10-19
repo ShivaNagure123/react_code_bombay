@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <Layout>
             <main id='dbContainer'>
-                <PageHeader title='Dashboard' placeholder='Home' />       
+                <PageHeader title='Dashboard' placeholder='Home' />    
             </main>
         </Layout>
     )
